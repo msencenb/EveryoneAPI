@@ -1,0 +1,8 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+
+target 'EveryoneAPI', :exclusive => true do
+  pod "EveryoneAPI", :path => "../"
+
+  
+end
