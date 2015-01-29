@@ -9,8 +9,8 @@
 
 Pod::Spec.new do |s|
   s.name             = "EveryoneAPI"
-  s.version          = "0.9.0"
-  s.summary          = "An objective-c wrapper for EveryoneAPI.com's API"
+  s.version          = "0.1.0"
+  s.summary          = "A short description of EveryoneAPI."
   s.description      = <<-DESC
                        An optional longer description of EveryoneAPI
 

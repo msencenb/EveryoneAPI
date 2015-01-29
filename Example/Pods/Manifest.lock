@@ -1,0 +1,14 @@
+PODS:
+  - EveryoneAPI (0.1.0)
+
+DEPENDENCIES:
+  - EveryoneAPI (from `../`)
+
+EXTERNAL SOURCES:
+  EveryoneAPI:
+    :path: ../
+
+SPEC CHECKSUMS:
+  EveryoneAPI: 8815edf2c4e0fdb4013d95badd338e6b3c045ccd
+
+COCOAPODS: 0.35.0
