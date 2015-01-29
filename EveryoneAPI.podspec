@@ -12,10 +12,13 @@ Pod::Spec.new do |s|
   s.version          = "0.9.0"
   s.summary          = "An objective-c wrapper for EveryoneAPI.com's API"
   s.description      = <<-DESC
-                       An optional longer description of EveryoneAPI
+                       To retrieve all information for EveryoneAPI use the following:
+                            EveryoneAPI *everyoneAPI = [[EveryoneAPI alloc] initWithAccountSID:@"ACb8444c3013dc40518e46b48c91f82ba0" withAuthToken:@"AUe90abecac85645ca8a314d41e9b55079"];
 
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                            [everyoneAPI getInformation:EveryoneAPIReturnAllInfo forPhoneNumber:@"5551234567" withSuccessHandler:^(EveryoneAPIResponseObject *responseObject){
+                                } withErrorHandler:^(NSError *error, NSNumber *statusCode, NSString *readableError){
+                            }];
+                        See the mask in EveryoneAPI.h for retrieving specific information, and EveryoneAPIResponseObject for an easy model wrapper
                        DESC
   s.homepage         = "https://github.com/msencenb/EveryoneAPI"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
