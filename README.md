@@ -20,7 +20,7 @@ it, simply add the following line to your Podfile:
 
 After installing use the following to query the EveryoneAPI for all information related to a phone number
 
-	EveryoneAPI *everyoneAPI = [[EveryoneAPI alloc] initWithAccountSID:@"ACb8444c3013dc40518e46b48c91f82ba0" withAuthToken:@"AUe90abecac85645ca8a314d41e9b55079"];
+    EveryoneAPI *everyoneAPI = [[EveryoneAPI alloc] initWithAccountSID:@"accountSID" withAuthToken:@"authToken"];
     [everyoneAPI getInformation:EveryoneAPIReturnAllInfo forPhoneNumber:@"5551234567" withSuccessHandler:^(EveryoneAPIResponseObject *responseObject){
     	//Success handler here
     } withErrorHandler:^(NSError *error, NSNumber *statusCode, NSString *readableError){
