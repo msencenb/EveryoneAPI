@@ -50,7 +50,9 @@
         if (urlResponse.statusCode != 200) {
             NSString *readableError = [self getReadableErrorFromURLResponse:urlResponse];
             NSNumber *numberStatuscode = [NSNumber numberWithInteger:urlResponse.statusCode];
-            errorHandler(nil,numberStatuscode,readableError);
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                errorHandler(nil,numberStatuscode,readableError);
+            });
             return;
         }
         
@@ -59,12 +61,16 @@
         NSDictionary *responseJSON = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
         
         if (parseError) {
-            errorHandler(parseError, [NSNumber numberWithInt:-1], parseError.localizedDescription);
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                errorHandler(parseError, [NSNumber numberWithInt:-1], parseError.localizedDescription);
+            });
             return;
         }
         
         EveryoneAPIResponseObject *responseObject = [[EveryoneAPIResponseObject alloc] initWithDictionary:responseJSON];
-        successHandler(responseObject);
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            successHandler(responseObject);
+        });
         
     }];
     [task resume];

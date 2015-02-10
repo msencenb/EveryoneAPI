@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "EveryoneAPI"
-  s.version          = "0.9.0"
+  s.version          = "0.9.1"
   s.summary          = "An objective-c wrapper for EveryoneAPI.com's API"
   s.description      = <<-DESC
                        To retrieve all information for EveryoneAPI use the following:
