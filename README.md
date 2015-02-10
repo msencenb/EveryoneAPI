@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/EveryoneAPI.svg?style=flat)](http://cocoadocs.org/docsets/EveryoneAPI)
 [![Platform](https://img.shields.io/cocoapods/p/EveryoneAPI.svg?style=flat)](http://cocoadocs.org/docsets/EveryoneAPI)
 
+[EveryoneAPI](https://www.everyoneapi.com/) is a simple API that retrieves information based on a phone number. Jump over to [EveryoneAPI.com](https://www.everyoneapi.com/) to sign up for an account or try out one of their [sample endpoints in your browser](https://api.everyoneapi.com/v1/phone/+15551234567?account_sid=[SID]&auth_token=[TOKEN]&pretty=true).
+
 ## Requirements
 
 iOS 8.0 or higher
