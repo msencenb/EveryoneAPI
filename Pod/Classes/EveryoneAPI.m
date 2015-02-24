@@ -114,7 +114,7 @@
     NSString *readableError = nil;
     switch (urlResponse.statusCode) {
         case 400:
-            readableError = @"The phone number entered is invalid. Please ensure you have correctly entered a 10 digit phone number";
+            readableError = @"The phone number entered is invalid. Ensure you have correctly entered a 10 digit US based phone number and excluded the country code.";
             break;
             
         case 401:
