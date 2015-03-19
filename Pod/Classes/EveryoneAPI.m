@@ -41,8 +41,10 @@
         
         // Deal with connection errors
         if (error) {
-            errorHandler(error, [NSNumber numberWithInt:-1], error.localizedDescription);
-            return;
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                errorHandler(error, [NSNumber numberWithInt:-1], error.localizedDescription);
+                return;
+            });
         }
         
         // Handle response errors
