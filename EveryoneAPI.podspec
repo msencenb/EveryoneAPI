@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "EveryoneAPI"
-  s.version          = "0.9.3"
+  s.version          = "0.9.4"
   s.summary          = "An objective-c wrapper for EveryoneAPI.com's API"
   s.description      = <<-DESC
                        To retrieve all information for EveryoneAPI use the following:
@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/msencenb/EveryoneAPI.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.platform     = :ios, '8.0'
+#s.platform     = :ios, '8.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes'
